@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ejemplo de pagina no accesible</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="jquery-1.9.1.js"></script>
+<script type="text/javascript" src="dist/jquery.validate.js"></script>
+<script type="text/javascript" src="dist/additional-methods.js"></script>
+<script type="text/javascript" src="dist/localization/messages_es.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#formulario").validate({
+		rules:{
+			nombre:{required:true,
+					lettersonly:true},
+			apellidos:{required:true,
+					lettersonly:true},
+			telefono:{required:true,
+					minlength:9,
+					maxlength:9,
+					digits:true},
+			email:{required:true,
+					email:true,
+					remote:"validar_email.php"},
+			email2:{required:true,
+					equalTo:email},
+			iban:{required:true,
+					maxLength:24}
+			},
+		messages:{
+				nombre:{
+						//required:"Introduce el nombre",
+						lettersonly:"Solo letras por favor"
+					},
+				email:{remote:"El correo ya esta registrado"}
+			},
+			submitHandler:function(){alert("Se va a enviar");}
+		});
+});
+	</script>  
+    </head>
+    <body>
+ <form id="formulario" action="" method="post" novalidate>
+     <label for="nombre">Nombre  *</label> <input type="text" id="nombre" name="nombre"><br>
+
+     <label for="apellidos">Apellidos  *</label> <input type="text" id="apellidos" name="apellidos"><br>
+
+     <label for="telefono">Teléfono  *</label><input type="tel" id="telefono" name="telefono"><br>
+
+     <label for="email">Email  *</label> <input type="email" id="email" name="email"><br>
+
+     <label for="email2">Confirmar Email  *</label> <input type="email" id="email2" name="email2"><br>
+
+     <label for="iban">Código IBAN *</label> <input type="text" id="iban" name="iban"><br>
+
+     <input class="enviar" type="submit" value="Enviar">
+</form>
+        
+    </body>
+</html>

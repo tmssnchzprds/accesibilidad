@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ejemplo de pagina no accesible</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table { border:1px solid black;}    
+        input {background-color:#9c0;}
+		a {font-size:9px;}
+    </style>   
+    </head>
+    <body>
+        <a href="/"><img src="logo.jpg"></a>
+        <br>
+        Paginador
+        <a href="">Primero</a>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">Ultimo</a>
+        <br>
+        <a href="#" onclick="alert('No soy accesible')">Pulsa</a>
+        <br>
+        <form method="post" action="alta.php">
+            Nombre:<input type="text" name="nombre">
+            <br>
+            Apellidos:<input type="text" name="aoellidos">
+            <br>
+            Dni:<input type="text" name="dni">
+            <br>
+            <button>Alta cliente</button>
+        </form>
+        <br>
+        <table>
+            <tr>
+                <td>Nommbre</td>
+                <td>Apellidos</td>
+                <td>Sueldo</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>Gomez</td>
+                <td>1600 €</td>
+            </tr>
+            <tr>
+                <td>Chimo</td>
+                <td>Bayo</td>
+                <td>1800 €</td>
+            </tr>
+            <tr>
+                <td>Perro</td>
+                <td>Flauta</td>
+                <td>1000 €</td>
+            </tr>
+            <tr>
+                <td>Politico</td>
+                <td>Corrupto</td>
+                <td>6000 €</td>
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>

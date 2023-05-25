@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ejemplo de pagina no accesible</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table { border:1px solid black;}    
+        input {background-color:#9c0;}
+		a {font-size:9px;}
+    </style> 
+    <script>
+	function prueba(){alert("Soy accesible");}
+	</script>  
+    </head>
+    <body>
+        <a href="/"><img src="logo.jpg" alt="foto de lo que sea" longdesc="descripcion"></a>
+        <br>
+        Paginador
+        <a href="">Primero</a>
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">Ultimo</a>
+        <br>
+        <a href="#">Pulsa</a>
+        <br>
+        <form method="post" action="alta.php">
+        <fieldset><legend>Leyenda</legend>
+        <label for="nombre">Nombre Cliente</label>
+            <input type="text" name="nombre" id="nombre" placeholder="nombre" tabindex="3">
+            <br>
+        <label for="apellido">Apellidos Cliente</label>
+           <input type="text" name="apellidos" id="apellido" placeholder="apellidos" tabindex="2">
+            <br>
+           <label for="dni">Dni</label>
+            :<input type="text" name="dni" id="dni" placeholder="dni" tabindex="1">
+            <br>
+            <button>Alta cliente</button></fieldset>
+        </form>
+        <br>
+        <table summary="esta tabla trate sobre los sueldos de la compañia">
+        <caption>Tabla de Sueldos </caption>/ 
+            <tr>
+                <th>Nommbre</th>
+                <th>Apellidos</th>
+                <th>Sueldo</th>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>Gomez</td>
+                <td>1600 €</td>
+            </tr>
+            <tr>
+                <td>Chimo</td>
+                <td>Bayo</td>
+                <td>1800 €</td>
+            </tr>
+            <tr>
+                <td>Perro</td>
+                <td>Flauta</td>
+                <td>1000 €</td>
+            </tr>
+            <tr>
+                <td>Politico</td>
+                <td>Corrupto</td>
+                <td>6000 €</td>
+            </tr>
+        </table>
+        
+        
+    </body>
+</html>
